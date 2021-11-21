@@ -1,0 +1,123 @@
+.products-page {
+    width: 85%;
+    margin: 2.5rem auto;
+}
+
+.products-page .show-categories {
+    width: 90%;
+    margin: 6rem auto 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products-page .show-categories button {
+    flex-basis: 33.33%;
+    border: none;
+    
+    background-color: #fff;
+    padding: 1.25rem 0.25rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--dark-color);
+    transition: all 0.1s ease;
+}
+
+
+
+.products-page .show-categories button:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+
+}
+
+
+.products-page .delete-all {
+    border: var(--primary-color) 1px solid;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0 1.5rem;
+}
+
+.products-page .delete-all input {
+    width: 20px;
+    height: 20px;
+}
+
+.products-page .delete-all button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.products-page main {
+    margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+    .products-page {
+        width: 85%;
+    }
+
+    .products-page .products {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .products-page {
+        width: 75%;
+    }
+
+    .products-page .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media screen and (min-width: 992px) {
+    .products-page {
+        width: 70%;
+    }
+
+    .products-page .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .products-page .show-categories {
+        flex-wrap: nowrap;
+    }
+
+
+    .products-page .show-categories button {
+        border: none;
+        border-right: 1px solid var(--primary-color);
+        background-color: transparent;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        font-size: 1rem;
+        color: var(--dark-color);
+    }
+
+    .products-page .show-categories button:last-child {
+        border-right: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .products-page .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

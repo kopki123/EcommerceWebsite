@@ -1,0 +1,49 @@
+.categories-page {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.categories-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-page form input {
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.categories-page .col {
+    margin-top: 1.25rem;
+}
+
+.categories-page .row {
+    font-size: 1rem;
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--primary-color);
+}
+
+.categories-page .row button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    margin: 0 0.5rem;
+}
+
+.categories-page form button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}

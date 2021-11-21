@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Nunito&display=swap');
+
+:root {
+  --primary-color: #A29978;
+  --secondary-color: #D6CCA0;
+  --light-color: #fffff2;
+  --dark-color: #71674D;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.75rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+/* 
+@media screen and (min-width: 800px) {
+  .page {
+    width: 85%;
+    margin: 0 auto;
+  }
+} */
+
+/* -------------------Header--------------------------- */
+@import url('./components/Header.css');
+
+/* -------------------Footer--------------------------- */
+@import url('./components/Footer.css');
+
+/* -------------------Login---------------------------- */
+@import url('./pages/Login.css');
+
+/* -------------------Register------------------------- */
+@import url('./pages/Register.css');
+
+/* -------------------CreateProduct-------------------- */
+@import url('./pages/CreateProduct.css');
+
+/* -------------------Categories----------------------- */
+@import url('./pages/Categories.css');
+
+/* -------------------Cart----------------------------- */
+@import url('./pages/Cart.css');
+
+/* -------------------Products------------------------- */
+@import url('./pages/Products.css');
+
+/* -------------------Product-------------------------- */
+@import url('./pages/Product.css');
+
+/* -------------------ProductItem---------------------- */
+@import url('./components/ProductItem.css');
+
+/* -------------------BtnRender------------------------ */
+@import url('./components/BtnRender.css');
+
+/* -------------------BtnRender------------------------ */
+@import url('./components/LoadMore.css');
+
+/* -------------------OrderHistory--------------------- */
+@import url('./pages/OrderHistory.css');
+
+
+
+
+
+
+/* -------------------Notfound------------------------- */
+@import url('./components/Notfound.css');

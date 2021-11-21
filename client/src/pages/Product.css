@@ -1,0 +1,131 @@
+.product-page {
+    width: 85%;
+    margin: 2rem auto;
+
+    /* border: #000 1px solid; */
+}
+
+.product-page img {
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    border: var(--secondary-color) 1px solid;
+}
+
+.product-page .product-detail {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem 0;
+}
+
+.product-page .product-detail h1 {
+    color: var(--dark-color);
+}
+
+.product-page .product-detail span {
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+.product-page .product-detail p {
+    font-size: 1rem;
+}
+
+.product-page .product-detail i {
+    font-size: 1.25rem;
+}
+
+.product-page .product-detail button {
+    border: 1px solid var(--primary-color);
+
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    align-self: flex-end;
+    transition: all 0.25s ease;
+}
+
+.product-page .product-detail button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+
+.related-section {
+    margin-top: 1.75rem;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.related-section h2 {
+    color: var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .product-page {
+        width: 75%;
+    }
+
+    .product-page main {
+        max-height: 25rem;
+        display: flex;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+
+
+
+    .product-page main img {
+        width: 45%;
+
+    }
+
+    /* .product-page .related-products .product-item {
+        height: 425px;
+    } */
+
+
+    .product-page .product-detail {
+        width: 50%;
+        gap: 1.5rem 0;
+    }
+
+    /* .product-page .product-detail button{
+        align-self: flex-end;
+    } */
+
+
+
+    .product-page .related-products {
+        margin-top: 1.5rem;
+        display: grid;
+        min-width: 300px;
+        /* grid-template-columns: minmax(250px, 300px); */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .product-page .related-products .product-item img {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .product-page {
+        width: 70%;
+    }
+
+    .product-page .related-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product-page .related-products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,59 @@
+/* register */
+.register-page {
+    width: 100%;
+}
+
+.register-section {
+    width: 90%;
+    height: 350px;
+    margin: 5rem auto;
+    padding: 1.5rem;
+    border: var(--dark-color) 2px solid;
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+
+.register-section h2 {
+    text-align: center;
+}
+
+.register-section input {
+    width: 100%;
+    margin: 0.75rem auto;
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: var(--light-color);
+}
+
+.register-section .row {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-section .row button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+}
+
+.register-page .row .login {
+    font-size: 0.75rem;
+    align-self: flex-end;
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 800px) {
+    .register-page {
+        height: calc(100vh - 320px);
+    }
+
+    .register-section {
+        width: 400px;
+        margin: 5rem auto;
+    }
+}

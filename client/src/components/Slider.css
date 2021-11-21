@@ -1,0 +1,139 @@
+.slider {
+    width: 90%;
+    margin: 3rem auto;
+    height: 300px;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    transition: all 0.5s ease-in;
+
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wrapper article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 245, 250);
+}
+
+.wrapper article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.85;
+    /* border: 1px solid #000; */
+
+}
+
+.wrapper article .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.wrapper article .content h4 {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.wrapper article .content p {
+    font-size: 0.75rem;
+}
+
+
+
+.wrapper article.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.wrapper article.lastSlide {
+    transform: translateX(-100%);
+}
+
+.wrapper article.nextSlide {
+    transform: translateX(100%);
+}
+
+.wrapper button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--light-color);
+    opacity: 0.75;
+    font-size: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    transform: translateY(-1.5rem);
+}
+
+.wrapper .prev {
+    left: 10px;
+}
+
+.wrapper .next {
+    right: 10px;
+}
+
+
+@media screen and (min-width: 992px) {
+    .slider {
+        width: 85%;
+        height: 600px;
+    }
+
+    .wrapper {
+        height: 600px;
+    }
+
+    .wrapper article img {
+        height: 600px;
+    }
+
+    .wrapper article .content {
+        position: absolute;
+        top: 0;
+
+        width: 35%;
+        height: 100%;
+        background-color: var(--secondary-color);
+        color: rgb(255, 255, 255);
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .wrapper article .content h4 {
+        font-size: 2rem;
+    }
+
+    .wrapper article .content p {
+        font-size: 1.25rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    .slider {
+        width: 70%;
+    }
+
+
+}
