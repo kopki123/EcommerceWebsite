@@ -12,7 +12,7 @@ const AppProvider = ({ children }) => {
     token: [token, setToken],
     ProductsAPI: ProductsAPI(),
     UserAPI: UserAPI(token),
-    CategoryAPI: CategoryAPI(token),
+    CategoryAPI: CategoryAPI(),
   };
 
   const refreshToken = async () => {
@@ -25,7 +25,9 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const firstLogin = localStorage.getItem("firstLogin");
-    if (firstLogin) refreshToken();
+    if (firstLogin) {
+      refreshToken();
+    }
   }, []);
 
   return <AppContext.Provider value={state}>{children}</AppContext.Provider>;

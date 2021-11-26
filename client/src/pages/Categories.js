@@ -6,7 +6,7 @@ const Categories = () => {
   const value = useGlobalContext();
   const [token] = value.token;
   const [categories] = value.CategoryAPI.categories;
-  const [callback, setCallback] = value.CategoryAPI.callback;
+
   const [category, setCategory] = useState("");
   const [onEdit, setOnEdit] = useState(false);
   const [id, setId] = useState("");
@@ -33,7 +33,6 @@ const Categories = () => {
       }
       setOnEdit(false);
       setCategory("");
-      setCallback(!callback);
     } catch (error) {
       alert(error.response.data.msg);
     }
@@ -51,7 +50,6 @@ const Categories = () => {
         headers: { authorization: token },
       });
       alert(response.data.msg);
-      setCallback(!callback);
     } catch (error) {
       alert(error.response.data.msg);
     }

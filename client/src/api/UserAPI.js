@@ -6,7 +6,6 @@ const UserAPI = (token) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [cart, setCart] = useState([]);
   const [history, setHistory] = useState([]);
-  const [callback, setCallback] = useState(false);
 
   useEffect(() => {
     if (token) {
@@ -48,7 +47,7 @@ const UserAPI = (token) => {
       };
       getHistory();
     }
-  }, [token, callback, isAdmin]);
+  }, [token, isAdmin]);
 
   const addCart = async (product) => {
     if (!isLogged) {
@@ -76,9 +75,8 @@ const UserAPI = (token) => {
     isLogged: [isLogged, setIsLogged],
     isAdmin: [isAdmin, setIsAdmin],
     cart: [cart, setCart],
-    addCart: addCart,
     history: [history, setHistory],
-    callback: [callback, setCallback],
+    addCart: addCart,
   };
 };
 

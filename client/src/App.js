@@ -21,41 +21,39 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Products />} />
-          <Route
-            path="/register"
-            element={isLogged ? <Notfound /> : <Register />}
-          />
-          <Route path="/login" element={isLogged ? <Notfound /> : <Login />} />
-          <Route
-            path="/category"
-            element={isAdmin ? <Categories /> : <Notfound />}
-          />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/product/:product_id" element={<Product />} />
-          <Route
-            path="/history"
-            element={isLogged ? <OrderHistory /> : <Notfound />}
-          />
-          <Route
-            path="/history/:payment_id"
-            element={isLogged ? <OrderDetail /> : <Notfound />}
-          />
-          <Route
-            path="/create_product"
-            element={isAdmin ? <CreateProduct /> : <Notfound />}
-          />
-          <Route
-            path="/edit_product/:id"
-            element={isAdmin ? <CreateProduct /> : <Notfound />}
-          />
-          <Route path="*" element={<Notfound />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route
+          path="/register"
+          element={isLogged ? <Notfound /> : <Register />}
+        />
+        <Route path="/login" element={isLogged ? <Notfound /> : <Login />} />
+        <Route
+          path="/category"
+          element={isAdmin ? <Categories /> : <Notfound />}
+        />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:product_id" element={<Product />} />
+        <Route
+          path="/history"
+          element={isLogged ? <OrderHistory /> : <Notfound />}
+        />
+        <Route
+          path="/history/:payment_id"
+          element={isLogged ? <OrderDetail /> : <Notfound />}
+        />
+        <Route
+          path="/create_product"
+          element={isAdmin ? <CreateProduct /> : <Notfound />}
+        />
+        <Route
+          path="/edit_product/:id"
+          element={isAdmin ? <CreateProduct /> : <Notfound />}
+        />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

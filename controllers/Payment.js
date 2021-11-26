@@ -21,7 +21,7 @@ const createPayment = async (req, res) => {
     const { cart, PaymentID, address } = req.body;
     const { _id, name, email } = user;
 
-    const newPayment = await Payment.create({
+    await Payment.create({
       user_id: _id,
       name,
       email,

@@ -10,15 +10,12 @@ class APIfeatures {
     const queryObj = { ...this.queryString };
     const excludedFields = ["page", "sort", "limit", "price", "gte", "lte"];
     excludedFields.forEach((el) => delete queryObj[el]);
-    // console.log(queryObj);
 
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(
       /\b(gte|gt|lt|lte|regex)\b/g,
       (match) => "$" + match
     );
-
-    // console.log(JSON.parse(queryStr));
 
     this.query.find(JSON.parse(queryStr));
 
@@ -27,7 +24,6 @@ class APIfeatures {
   sorting() {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(",").join("");
-      // console.log(sortBy);
       this.query = this.query.sort(sortBy);
     } else {
       this.query = this.query.sort("-createdAt");
@@ -43,7 +39,6 @@ class APIfeatures {
 
     return this;
   }
-
   price() {
     const gte = this.queryString.gte;
     const lte = this.queryString.lte;
@@ -63,7 +58,6 @@ const getProducts = async (req, res) => {
       .sorting()
       .paginating()
       .price();
-    // console.log(features.query);
     const products = await features.query;
 
     res.json({
@@ -90,7 +84,7 @@ const createProduct = async (req, res) => {
       return res.status(400).json({ msg: "This product already exists." });
     }
 
-    const newProduct = Product.create({
+    await Product.create({
       product_id,
       title,
       price,

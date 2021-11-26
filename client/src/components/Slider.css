@@ -10,7 +10,6 @@
     height: 300px;
     display: flex;
     transition: all 0.5s ease-in;
-
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -29,8 +28,6 @@
     height: 300px;
     object-fit: cover;
     opacity: 0.85;
-    /* border: 1px solid #000; */
-
 }
 
 .wrapper article .content {
@@ -52,8 +49,6 @@
 .wrapper article .content p {
     font-size: 0.75rem;
 }
-
-
 
 .wrapper article.activeSlide {
     opacity: 1;
@@ -88,7 +83,6 @@
 .wrapper .next {
     right: 10px;
 }
-
 
 @media screen and (min-width: 992px) {
     .slider {
@@ -126,14 +120,10 @@
     .wrapper article .content p {
         font-size: 1.25rem;
     }
-
-
 }
 
 @media screen and (min-width: 1200px) {
     .slider {
         width: 70%;
     }
-
-
 }

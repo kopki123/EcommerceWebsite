@@ -4,17 +4,10 @@ import "./SearchBar.css";
 
 const SearchBar = () => {
   const value = useGlobalContext();
-  const [categories] = value.CategoryAPI.categories;
-  const [category, setCategory] = value.ProductsAPI.category;
   const [sort, setSort] = value.ProductsAPI.sort;
   const [search, setSearch] = value.ProductsAPI.search;
   const [gte, setGte] = value.ProductsAPI.gte;
   const [lte, setLte] = value.ProductsAPI.lte;
-
-  const handleCategory = (e) => {
-    setCategory(e.target.value);
-    setSearch("");
-  };
 
   return (
     <div className="search_bar">

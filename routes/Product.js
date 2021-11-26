@@ -1,12 +1,12 @@
 const router = require("express").Router();
+const auth = require("../middleware/auth");
+const authAdmin = require("../middleware/authAdmin");
 const {
   getProducts,
   createProduct,
   deleteProduct,
   updateProduct,
 } = require("../controllers/Product");
-const auth = require("../middleware/auth");
-const authAdmin = require("../middleware/authAdmin");
 
 router.route("/products").get(getProducts).post(auth, authAdmin, createProduct);
 

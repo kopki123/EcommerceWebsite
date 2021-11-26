@@ -3,7 +3,6 @@ import axios from "axios";
 
 const CategoryAPI = () => {
   const [categories, setCategories] = useState([]);
-  const [callback, setCallback] = useState(false);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -16,7 +15,6 @@ const CategoryAPI = () => {
 
   return {
     categories: [categories, setCategories],
-    callback: [callback, setCallback],
   };
 };
 

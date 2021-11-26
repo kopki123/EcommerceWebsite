@@ -1,4 +1,3 @@
-const { builtinModules } = require("module");
 const User = require("../models/User");
 
 const authAdmin = async (req, res, next) => {

@@ -5,20 +5,12 @@ import axios from "axios";
 
 const Header = () => {
   const [showLink, setShowLink] = useState(false);
+  const linksContainerRef = useRef();
+  const linksRef = useRef();
   const value = useGlobalContext();
   const [isLogged, setIsLogged] = value.UserAPI.isLogged;
   const [isAdmin, setIsAdmin] = value.UserAPI.isAdmin;
   const [cart] = value.UserAPI.cart;
-  const linksContainerRef = useRef();
-  const linksRef = useRef();
-
-  const logoutUser = async () => {
-    await axios.get("/user/logout");
-    localStorage.removeItem("firstLogin");
-    setIsLogged(false);
-    setIsAdmin(false);
-    window.location.reload("/");
-  };
 
   useEffect(() => {
     const Height = linksRef.current.getBoundingClientRect().height;
@@ -28,6 +20,14 @@ const Header = () => {
       linksContainerRef.current.style.height = `0px`;
     }
   }, [showLink]);
+
+  const logoutUser = async () => {
+    await axios.get("/user/logout");
+    localStorage.removeItem("firstLogin");
+    setIsLogged(false);
+    setIsAdmin(false);
+    window.location.reload("/");
+  };
 
   const AdminRouter = () => {
     return (

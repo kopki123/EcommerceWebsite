@@ -94,15 +94,6 @@ p {
   }
 }
 
-
-/* 
-@media screen and (min-width: 800px) {
-  .page {
-    width: 85%;
-    margin: 0 auto;
-  }
-} */
-
 /* -------------------Header--------------------------- */
 @import url('./components/Header.css');
 
@@ -141,11 +132,6 @@ p {
 
 /* -------------------OrderHistory--------------------- */
 @import url('./pages/OrderHistory.css');
-
-
-
-
-
 
 /* -------------------Notfound------------------------- */
 @import url('./components/Notfound.css');
